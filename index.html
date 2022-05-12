@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+	<header>
+		<div class = "logo">
+			<img src="sblogo.png">
+		</div>
+    <ul>
+    
+      <li><a href="#homepage">Home Page</a></li>
+  			
+      <li><a href="#biography">Bio</a></li>
+  			
+      <li><a href="#tourdates">Tour Date</a></li>
+    </ul>
+	</header>
+
+<!-- Slideshow container -->
+<body>
+      <div class = "slideshow">
+        <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <img src="tron2.png" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <video src ="potm.mp4" autoplay loop muted controls style="width: 100%;"></video> 
+      </div>
+
+      <div class="mySlides fade">
+        <video src ="tlw.mp4" autoplay loop muted controls style="width: 100%;"></video> 
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      </div>
+      <br>
+
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+      </div>
+
+      <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+      }
+      </script>
+    </div>
+    <br>
+  <div class = bgcolors>
+    <div class = "album-pictures">
+      <h1>Albums and Tour Dates</h1>
+      <div class = "albums">
+          <section>
+            <div class = "firstpc">
+              <ul>
+                <img src = "BinReaper2.png">
+                <img src = "megatron.png">
+                <img src = "pre-game.jpg">
+                <img src = "BinReaper1.jpg">
+            </div>
+            <br>
+            <div class = "secondpc">
+              <p>Sleeve Nash</p>
+              <img src = "sleevenash.jpg">
+              <p>Back to the Future</p>
+              <img src = "bttf.jpg">
+              <p>Luka Troncic</p>
+              <img src = "lukatroncic.png">
+              <p>Dookie Brothers</p>
+              <img src="db.png">
+            </div>
+          </section>
+      </div>
+    </div>
+  </div>
+
+  <a name = "tourdates"></a>
+    <a href="https://www.ticketmaster.com/babytron-tickets/artist/2854087">
+  <div class = "tde">
+    <img src="tourdate.jpg">
+  </div>
+  <br>
+  
+  <a name = "biography"></a>
+  <div class = "bio">
+    <a>James Johnson also known as, BabyTron, is a rapper from Ypsilanti, Michigan. Johnson was born on June 6, 2000 and quickly became a young internet rapper. He launched his YouTube channel on August 10, 2017 and began to upload content in 2018. In October 30, 2019, Tron dropped his debut album, Bin Reaper, quickly blowing up with the song Jesus Shuttlesworth becoming his hit song. Ever since his debut album in 2019, BabyTron has released 9 albums including the ones with his group members. In 2022, BabyTron released his </a>
+  </div>
+
+  <footer class = "firt">
+    <form action="action_page.php" style="border:1px solid #ccc">
+  <div class="container">
+    <h1>Sign Up</h1>
+    <hr>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <p>By entering your email you agree to having emails being sent to your email <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+  </div>
+    </form>
+
+    </footer>
+  </body>
+</html>
